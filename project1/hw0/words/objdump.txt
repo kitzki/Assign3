@@ -1,0 +1,21 @@
+file format elf64-x86-64 and architecture: i386:x86-64.
+
+Some include:
+.text - executable code
+.data - initialized data
+.bss - uninitialized data
+.rodata - read-only data
+.init and .fini - initialization and finalization code
+.plt and .plt.sec - Procedure Linkage Table for dynamic linking
+
+
+The main function is located in the .text section at address 0x00000000000011e9.
+
+
+Yes, there is a stack segment visible in the program headers:
+STACK off    0x0000000000000000 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**4
+         filesz 0x0000000000000000 memsz 0x0000000000000000 flags rw-
+
+The stack segment has no file size (filesz 0x0) because it's allocated at runtime by the OS, not stored in the binary file itself.
+Heap: The heap is not explicitly visible as a separate segment in this static analysis because the heap is dynamically allocated at runtime through system calls like brk() or mmap().
+The binary shows this is a simple C program (likely the wc word count utility) that uses standard library functions

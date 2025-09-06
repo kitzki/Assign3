@@ -1,0 +1,11 @@
+1. $1 = (char **) 0x7fffffffd038
+
+2. $2 = 0x7fffffffd536 "/workspaces/Assign3/project1/hw0/words/wc"
+
+3. Symbol "main" is a function at address 0x5555555551e9.
+
+4. For info stack, I see where I am in the call stack (function + source line).
+
+5. For info frame, I see details about the current stack frame layout (arguments, locals, saved registers).
+
+6. For info registers, I see the raw CPU state at this moment (instruction pointer, stack pointer, general-purpose registers).
